@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Windows.Forms;
 using MetroFramework.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
@@ -67,6 +68,34 @@ namespace OLYMPUS
             }
             else
                 textBox1.Text = "Не удалось открыть файл!\n";
+        }
+
+        private void toolStripButton3_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = "Выбор файла...\n";
+            Update();
+            string baseDirectory = Application.StartupPath;
+            int pos = baseDirectory.LastIndexOf("\\");
+            string way = baseDirectory.Substring(0, pos - 5) + "OLYMPUS\\OutputData\\";
+            //string baseDirectory = Application.StartupPath;
+            //int pos = baseDirectory.LastIndexOf("\\");
+            //string way = baseDirectory.Substring(0, pos - 5) + "OLYMPUS\\OutputData\\";
+            //string baseDirectory = Directory.GetCurrentDirectory();
+            //int pos = baseDirectory.LastIndexOf("\\");
+            //string way = baseDirectory.Substring(0, pos - 5) + "OLYMPUS\\OutputData\\";
+            //string way = @"D:\Repos\OLYMPUS\OLYMPUS\OutputData\output_system.txt";
+            saveFileDialog1.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
+            saveFileDialog1.FileName = "";
+            saveFileDialog1.InitialDirectory = way;
+
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                DECLARE.wayOut = saveFileDialog1.FileName;
+                textBox1.Text = "Файл успешно выбран!\n";
+            }
+            else
+                textBox1.Text = "Не удалось выбрать файл. Результаты будут записаны в служебный файл!\n";
+
         }
     }
 }

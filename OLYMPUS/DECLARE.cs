@@ -10,6 +10,9 @@
             Дата: 12.03.2024
         */
 
+        public static double Fo; // Число Фурье
+        public static double[,] Theta; // Профили температуры
+
         /// <summary>
         /// Отслеживание окончания вычислений
         /// </summary>
@@ -69,8 +72,8 @@
         /// </summary>
         public static int PrintStep;
 
-        public static System.String wayIn; // Путь файла исходных данных
-        public static System.String wayOut; // Путь файлы выходных данны
+        public static string wayIn; // Путь файла исходных данных
+        public static string wayOut ; // Путь файлы выходных данны
 
         /* 
          * Две управляющие переменные.

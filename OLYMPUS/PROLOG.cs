@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 
 namespace OLYMPUS
 {
@@ -14,7 +15,41 @@ namespace OLYMPUS
 
         public PROLOG() { }
 
-        public static void LabRun() { }
+        public static void LabRun()
+        {
+            //DECLARE.Theta = new double[DECLARE.Nr + 1][];
+            //for (int r = 0; r <= DECLARE.Nr; r++)
+            //    DECLARE.Theta[r] = new double[DECLARE.Nt + 1];
+
+            //if (DECLARE.wayOut == null)
+            //{
+            //    string baseDirectory = AppDomain.CurrentDomain.BaseDirectory;
+            //    int pos = baseDirectory.LastIndexOf("\\");
+            //    string way = baseDirectory.Substring(0, pos - 5) + "OLYMPUS\\";
+            //    DECLARE.wayOut = way + "OutputData\\output_system.txt";
+            //}
+            // Инициализация Theta
+            DECLARE.Theta = new double[DECLARE.Nr + 1, DECLARE.Nt + 1];
+
+            for (int r = 0; r <= DECLARE.Nr; r++)
+            {
+                for (int t = 0; t <= DECLARE.Nt; t++)
+                {
+                    DECLARE.Theta[r, t] = 0; // Инициализация элементов массива
+                }
+            }
+
+            if (DECLARE.wayOut == null)
+            {
+                //string baseDirectory = AppDomain.CurrentDomain.BaseDirectory;
+                //int pos = baseDirectory.LastIndexOf("\\");
+                //string way = baseDirectory.Substring(0, pos - 5) + "OLYMPUS\\";
+                string way = @"D:\Repos\OLYMPUS\OLYMPUS\";
+                DECLARE.wayOut = way + "OutputData\\output_system.txt";
+                
+            }
+
+        }
         public static void Clear() { }
         public static void Preset()
         {
@@ -72,7 +107,12 @@ namespace OLYMPUS
             fin.Close();
         }
         public static void Data() { }
-        public static void Initial() { }
+        public static void Initial()
+        {
+            DECLARE.Step = 1;
+            for (int r = 0; r <= DECLARE.Nr; r++)
+                DECLARE.Theta[r, 0] = 1; // если Theta - двумерный массив
+        }
         public static void Auxval() { }
         /// <summary>
         /// В методе управляющим переменным присвиваются значения false, показывающие, 

@@ -104,11 +104,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="OLYMPUS\OutputData\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="OLYMPUS\InputData\InputFile.txt" />
+    <Content Include="OLYMPUS\OutputData\Input1.txt" />
+    <Content Include="OLYMPUS\OutputData\output_system.txt" />
     <Content Include="pl.wav" />
     <Content Include="OLYMPUS\Resources\1.png" />
     <Content Include="OLYMPUS\Resources\2.png" />

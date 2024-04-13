@@ -12,7 +12,13 @@
 
         public EPILOG() { }
 
-        public static void Tesend() { DECLARE.EndCal = true; }
+        public static void Tesend()
+        {
+            DECLARE.Step++;
+            if (DECLARE.Step > DECLARE.Nt)
+                DECLARE.EndCal = true;
+        }
+
         public static void Endrun() { DECLARE.EndExp = true; }
     }
 }
