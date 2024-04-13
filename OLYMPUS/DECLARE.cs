@@ -69,7 +69,8 @@
         /// </summary>
         public static int PrintStep;
 
-
+        public static System.String wayIn; // Путь файла исходных данных
+        public static System.String wayOut; // Путь файлы выходных данны
 
         /* 
          * Две управляющие переменные.

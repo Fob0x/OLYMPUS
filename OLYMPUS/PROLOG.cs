@@ -1,4 +1,6 @@
-﻿namespace OLYMPUS
+﻿using System.IO;
+
+namespace OLYMPUS
 {
     internal class PROLOG
     {
@@ -14,7 +16,61 @@
 
         public static void LabRun() { }
         public static void Clear() { }
-        public static void Preset() { }
+        public static void Preset()
+        {
+            string way_str = DECLARE.wayIn;
+            StreamReader fin = new StreamReader(way_str);
+
+            if (fin != null)
+            {
+                string str;
+                double elem;
+
+                // Пропускаем первые 6 строк
+                for (int i = 0; i < 6; i++)
+                    fin.ReadLine();
+
+                // Считываем и устанавливаем значения переменных DECLARE
+                fin.ReadLine(); // Пропускаем первую строку
+                if (double.TryParse(fin.ReadLine(), out elem))
+                    DECLARE.R = elem;
+
+                fin.ReadLine(); // Пропускаем 3 строки
+                if (double.TryParse(fin.ReadLine(), out elem))
+                    DECLARE.Lambda = elem;
+
+                if (double.TryParse(fin.ReadLine(), out elem))
+                    DECLARE.Ro = elem;
+
+                if (double.TryParse(fin.ReadLine(), out elem))
+                    DECLARE.Cv = elem;
+
+                if (double.TryParse(fin.ReadLine(), out elem))
+                    DECLARE.T0 = elem;
+
+                if (double.TryParse(fin.ReadLine(), out elem))
+                    DECLARE.Tz = elem;
+
+                fin.ReadLine(); // Пропускаем 4 строки
+                if (double.TryParse(fin.ReadLine(), out elem))
+                    DECLARE.Eps = elem;
+
+                if (double.TryParse(fin.ReadLine(), out elem))
+                    DECLARE.Nr = (int)elem; // Явное преобразование double к int
+
+                if (double.TryParse(fin.ReadLine(), out elem))
+                    DECLARE.Nt = (int)elem;
+
+                if (double.TryParse(fin.ReadLine(), out elem))
+                    DECLARE.MaxIter = (int)elem;
+
+                fin.ReadLine(); // Пропускаем 4 строки
+                if (double.TryParse(fin.ReadLine(), out elem))
+                    DECLARE.PrintStep = (int)elem;
+            }
+
+            fin.Close();
+        }
         public static void Data() { }
         public static void Initial() { }
         public static void Auxval() { }
