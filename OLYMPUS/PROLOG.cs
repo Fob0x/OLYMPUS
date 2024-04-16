@@ -51,6 +51,10 @@ namespace OLYMPUS
 
         }
         public static void Clear() { }
+
+        /// <summary>
+        /// Считывает данные из файла и подставляет их в inputForm
+        /// </summary>
         public static void Preset()
         {
             string way_str = DECLARE.wayIn;
@@ -58,53 +62,45 @@ namespace OLYMPUS
 
             if (fin != null)
             {
-                string str;
-                double elem;
-
                 // Пропускаем первые 6 строк
                 for (int i = 0; i < 6; i++)
                     fin.ReadLine();
 
                 // Считываем и устанавливаем значения переменных DECLARE
-                fin.ReadLine(); // Пропускаем первую строку
-                if (double.TryParse(fin.ReadLine(), out elem))
-                    DECLARE.R = elem;
+                DECLARE.R = ReadDoubleFromLine(fin.ReadLine());
 
-                fin.ReadLine(); // Пропускаем 3 строки
-                if (double.TryParse(fin.ReadLine(), out elem))
-                    DECLARE.Lambda = elem;
+                // Пропускаем следующие 3 строки
+                for (int i = 0; i < 3; i++)
+                    fin.ReadLine();
+                DECLARE.Lambda = ReadDoubleFromLine(fin.ReadLine());
+                DECLARE.Ro = ReadDoubleFromLine(fin.ReadLine());
+                DECLARE.Cv = ReadDoubleFromLine(fin.ReadLine());
+                DECLARE.T0 = ReadDoubleFromLine(fin.ReadLine());
+                DECLARE.Tz = ReadDoubleFromLine(fin.ReadLine());
 
-                if (double.TryParse(fin.ReadLine(), out elem))
-                    DECLARE.Ro = elem;
+                // Пропускаем еще 3 строки
+                for (int i = 0; i < 3; i++)
+                    fin.ReadLine();
+                DECLARE.Eps = ReadDoubleFromLine(fin.ReadLine());
+                DECLARE.Nr = (int)ReadDoubleFromLine(fin.ReadLine());
+                DECLARE.Nt = (int)ReadDoubleFromLine(fin.ReadLine());
+                DECLARE.MaxIter = (int)ReadDoubleFromLine(fin.ReadLine());
 
-                if (double.TryParse(fin.ReadLine(), out elem))
-                    DECLARE.Cv = elem;
-
-                if (double.TryParse(fin.ReadLine(), out elem))
-                    DECLARE.T0 = elem;
-
-                if (double.TryParse(fin.ReadLine(), out elem))
-                    DECLARE.Tz = elem;
-
-                fin.ReadLine(); // Пропускаем 4 строки
-                if (double.TryParse(fin.ReadLine(), out elem))
-                    DECLARE.Eps = elem;
-
-                if (double.TryParse(fin.ReadLine(), out elem))
-                    DECLARE.Nr = (int)elem; // Явное преобразование double к int
-
-                if (double.TryParse(fin.ReadLine(), out elem))
-                    DECLARE.Nt = (int)elem;
-
-                if (double.TryParse(fin.ReadLine(), out elem))
-                    DECLARE.MaxIter = (int)elem;
-
-                fin.ReadLine(); // Пропускаем 4 строки
-                if (double.TryParse(fin.ReadLine(), out elem))
-                    DECLARE.PrintStep = (int)elem;
+                // Пропускаем еще 3 строки 
+                for (int i = 0; i < 3; i++)
+                    fin.ReadLine();
+                DECLARE.PrintStep = (int)ReadDoubleFromLine(fin.ReadLine());
             }
-
             fin.Close();
+        }
+
+        private static double ReadDoubleFromLine(string line)
+        {
+            string[] elements = line.Split(' '); // Разбиваем строку на массив строк по пробелам блять, сука, неужели оно работает
+            double elem;
+            if (elements.Length > 0 && double.TryParse(elements[0], out elem))
+                return elem;
+            return 0; // или другое значение по умолчанию
         }
         public static void Data() { }
         public static void Initial()
