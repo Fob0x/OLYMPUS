@@ -116,5 +116,10 @@ namespace OLYMPUS
         /// (он только начинается при передаче управления методу Contrl)
         /// </summary>
         public static void Start() { DECLARE.EndCal = false; DECLARE.EndExp = false; }
+
+        public static void GetWay(string path)
+        {
+            DECLARE.wayIn = path;
+        }
     }
 }

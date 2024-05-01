@@ -26,23 +26,23 @@ namespace OLYMPUS
                 fout.WriteLine($"Версия: 02.01 Дата: {now.Day}.{(now.Month >= 9 ? "" : "0")}{now.Month}.{now.Year}");
 
                 fout.WriteLine("\n1. Геометрические параметры объекта\n");
-                fout.WriteLine($" {DECLARE.R} - радиус шара, м\n");
+                fout.WriteLine($"{DECLARE.R} - радиус шара, м\n");
 
                 fout.WriteLine("\n2. Физические параметры объекта\n");
-                fout.WriteLine($" {DECLARE.Lambda} - коэффициент теплопроводности, Вт/(м*К)");
-                fout.WriteLine($" {DECLARE.Ro} - плотность, кг/м^3");
-                fout.WriteLine($" {DECLARE.Cv} - теплоемкость, Д/(кг*К)");
-                fout.WriteLine($" {DECLARE.T0} - начальная температура, К");
-                fout.WriteLine($" {DECLARE.Tz} - температура окружающей среды\n");
+                fout.WriteLine($"{DECLARE.Lambda} - коэффициент теплопроводности, Вт/(м*К)");
+                fout.WriteLine($"{DECLARE.Ro} - плотность, кг/м^3");
+                fout.WriteLine($"{DECLARE.Cv} - теплоемкость, Д/(кг*К)");
+                fout.WriteLine($"{DECLARE.T0} - начальная температура, К");
+                fout.WriteLine($"{DECLARE.Tz} - температура окружающей среды\n");
 
                 fout.WriteLine("\n3. Параметры алгоритма\n");
-                fout.WriteLine($" {DECLARE.Eps} - точность вычислений");
-                fout.WriteLine($" {DECLARE.Nr} - количество узлов вдоль R-оси");
-                fout.WriteLine($" {DECLARE.Nt} - количество узлов вдоль t-оси");
-                fout.WriteLine($" {DECLARE.MaxIter} - количество итераций\n");
+                fout.WriteLine($"{DECLARE.Eps} - точность вычислений");
+                fout.WriteLine($"{DECLARE.Nr} - количество узлов вдоль R-оси");
+                fout.WriteLine($"{DECLARE.Nt} - количество узлов вдоль t-оси");
+                fout.WriteLine($"{DECLARE.MaxIter} - количество итераций\n");
 
                 fout.WriteLine("\n4. Управляющие параметры\n");
-                fout.WriteLine($" {DECLARE.PrintStep} - шаг вывода результата\n");
+                fout.WriteLine($"{DECLARE.PrintStep} - шаг вывода результата\n");
 
                 fout.WriteLine("\n5. Числа подобия\n\n\n\n\n");
                 fout.WriteLine("№ Шаг Число Фурье Таблица температур");

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 using MetroFramework.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
@@ -9,6 +10,7 @@ namespace OLYMPUS
     public partial class OLYMPUS : MetroForm
     {
         private InputForm inputForm; // Объявляем переменную для хранения экземпляра InputForm
+        private Graph graph;
         public OLYMPUS()
         {
             InitializeComponent();
@@ -97,5 +99,20 @@ namespace OLYMPUS
                 textBox1.Text = "Не удалось выбрать файл. Результаты будут записаны в служебный файл!\n";
 
         }
+
+        private void ViewTemperature_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = "Визуализация результатов\n";
+            Update();
+            graph = new Graph();
+            if (/*sender == this.menuViewTemperatureCenter ||*/ sender == toolStripTemperatureCenter)
+                graph.modification = 1;
+            else
+                graph.modification = 2;
+            graph.Show();
+        }
+
+        
+
     }
 }

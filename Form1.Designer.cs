@@ -29,34 +29,34 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OLYMPUS));
-            System.Windows.Forms.TreeNode treeNode129 = new System.Windows.Forms.TreeNode("MAIN");
-            System.Windows.Forms.TreeNode treeNode130 = new System.Windows.Forms.TreeNode("DECLARE");
-            System.Windows.Forms.TreeNode treeNode131 = new System.Windows.Forms.TreeNode("CONTROL");
-            System.Windows.Forms.TreeNode treeNode132 = new System.Windows.Forms.TreeNode("PROLOG");
-            System.Windows.Forms.TreeNode treeNode133 = new System.Windows.Forms.TreeNode("CALCULE");
-            System.Windows.Forms.TreeNode treeNode134 = new System.Windows.Forms.TreeNode("OUTPUT");
-            System.Windows.Forms.TreeNode treeNode135 = new System.Windows.Forms.TreeNode("EPILOG");
-            System.Windows.Forms.TreeNode treeNode136 = new System.Windows.Forms.TreeNode("Project Structure", new System.Windows.Forms.TreeNode[] {
-            treeNode129,
-            treeNode130,
-            treeNode131,
-            treeNode132,
-            treeNode133,
-            treeNode134,
-            treeNode135});
-            System.Windows.Forms.TreeNode treeNode137 = new System.Windows.Forms.TreeNode("Input1");
-            System.Windows.Forms.TreeNode treeNode138 = new System.Windows.Forms.TreeNode("Input2");
-            System.Windows.Forms.TreeNode treeNode139 = new System.Windows.Forms.TreeNode("Input Data", new System.Windows.Forms.TreeNode[] {
-            treeNode137,
-            treeNode138});
-            System.Windows.Forms.TreeNode treeNode140 = new System.Windows.Forms.TreeNode("Outout_System");
-            System.Windows.Forms.TreeNode treeNode141 = new System.Windows.Forms.TreeNode("Output1");
-            System.Windows.Forms.TreeNode treeNode142 = new System.Windows.Forms.TreeNode("Output2");
-            System.Windows.Forms.TreeNode treeNode143 = new System.Windows.Forms.TreeNode("Output Data", new System.Windows.Forms.TreeNode[] {
-            treeNode140,
-            treeNode141,
-            treeNode142});
-            System.Windows.Forms.TreeNode treeNode144 = new System.Windows.Forms.TreeNode("Commands");
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("MAIN");
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("DECLARE");
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("CONTROL");
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("PROLOG");
+            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("CALCULE");
+            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("OUTPUT");
+            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("EPILOG");
+            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Project Structure", new System.Windows.Forms.TreeNode[] {
+            treeNode1,
+            treeNode2,
+            treeNode3,
+            treeNode4,
+            treeNode5,
+            treeNode6,
+            treeNode7});
+            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("Input1");
+            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("Input2");
+            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("Input Data", new System.Windows.Forms.TreeNode[] {
+            treeNode9,
+            treeNode10});
+            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("Outout_System");
+            System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("Output1");
+            System.Windows.Forms.TreeNode treeNode14 = new System.Windows.Forms.TreeNode("Output2");
+            System.Windows.Forms.TreeNode treeNode15 = new System.Windows.Forms.TreeNode("Output Data", new System.Windows.Forms.TreeNode[] {
+            treeNode12,
+            treeNode13,
+            treeNode14});
+            System.Windows.Forms.TreeNode treeNode16 = new System.Windows.Forms.TreeNode("Commands");
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -77,7 +77,7 @@
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripTemperatureCenter = new System.Windows.Forms.ToolStripButton();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.menuStrip1.SuspendLayout();
@@ -176,43 +176,43 @@
             this.treeView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.treeView1.Location = new System.Drawing.Point(0, 0);
             this.treeView1.Name = "treeView1";
-            treeNode129.Name = "Узел1";
-            treeNode129.Text = "MAIN";
-            treeNode130.Name = "Узел3";
-            treeNode130.Text = "DECLARE";
-            treeNode131.Name = "Узел4";
-            treeNode131.Text = "CONTROL";
-            treeNode132.Name = "Узел5";
-            treeNode132.Text = "PROLOG";
-            treeNode133.Name = "Узел6";
-            treeNode133.Text = "CALCULE";
-            treeNode134.Name = "Узел7";
-            treeNode134.Text = "OUTPUT";
-            treeNode135.Name = "Узел8";
-            treeNode135.Text = "EPILOG";
-            treeNode136.Name = "Узел0";
-            treeNode136.Text = "Project Structure";
-            treeNode137.Name = "Узел10";
-            treeNode137.Text = "Input1";
-            treeNode138.Name = "Узел11";
-            treeNode138.Text = "Input2";
-            treeNode139.Name = "Узел9";
-            treeNode139.Text = "Input Data";
-            treeNode140.Name = "Узел13";
-            treeNode140.Text = "Outout_System";
-            treeNode141.Name = "Узел14";
-            treeNode141.Text = "Output1";
-            treeNode142.Name = "Узел15";
-            treeNode142.Text = "Output2";
-            treeNode143.Name = "Узел12";
-            treeNode143.Text = "Output Data";
-            treeNode144.Name = "Узел16";
-            treeNode144.Text = "Commands";
+            treeNode1.Name = "Узел1";
+            treeNode1.Text = "MAIN";
+            treeNode2.Name = "Узел3";
+            treeNode2.Text = "DECLARE";
+            treeNode3.Name = "Узел4";
+            treeNode3.Text = "CONTROL";
+            treeNode4.Name = "Узел5";
+            treeNode4.Text = "PROLOG";
+            treeNode5.Name = "Узел6";
+            treeNode5.Text = "CALCULE";
+            treeNode6.Name = "Узел7";
+            treeNode6.Text = "OUTPUT";
+            treeNode7.Name = "Узел8";
+            treeNode7.Text = "EPILOG";
+            treeNode8.Name = "Узел0";
+            treeNode8.Text = "Project Structure";
+            treeNode9.Name = "Узел10";
+            treeNode9.Text = "Input1";
+            treeNode10.Name = "Узел11";
+            treeNode10.Text = "Input2";
+            treeNode11.Name = "Узел9";
+            treeNode11.Text = "Input Data";
+            treeNode12.Name = "Узел13";
+            treeNode12.Text = "Outout_System";
+            treeNode13.Name = "Узел14";
+            treeNode13.Text = "Output1";
+            treeNode14.Name = "Узел15";
+            treeNode14.Text = "Output2";
+            treeNode15.Name = "Узел12";
+            treeNode15.Text = "Output Data";
+            treeNode16.Name = "Узел16";
+            treeNode16.Text = "Commands";
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode136,
-            treeNode139,
-            treeNode143,
-            treeNode144});
+            treeNode8,
+            treeNode11,
+            treeNode15,
+            treeNode16});
             this.treeView1.Size = new System.Drawing.Size(226, 438);
             this.treeView1.TabIndex = 1;
             // 
@@ -234,7 +234,7 @@
             this.toolStripButton4,
             this.toolStripSeparator2,
             this.toolStripButton5,
-            this.toolStripButton6});
+            this.toolStripTemperatureCenter});
             this.toolStrip1.Location = new System.Drawing.Point(20, 84);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(922, 25);
@@ -303,14 +303,15 @@
             this.toolStripButton5.Size = new System.Drawing.Size(23, 22);
             this.toolStripButton5.Text = "toolStripButton5";
             // 
-            // toolStripButton6
+            // toolStripTemperatureCenter
             // 
-            this.toolStripButton6.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton6.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton6.Image")));
-            this.toolStripButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton6.Name = "toolStripButton6";
-            this.toolStripButton6.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton6.Text = "toolStripButton6";
+            this.toolStripTemperatureCenter.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripTemperatureCenter.Image = ((System.Drawing.Image)(resources.GetObject("toolStripTemperatureCenter.Image")));
+            this.toolStripTemperatureCenter.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripTemperatureCenter.Name = "toolStripTemperatureCenter";
+            this.toolStripTemperatureCenter.Size = new System.Drawing.Size(23, 22);
+            this.toolStripTemperatureCenter.Text = "toolStripButton6";
+            this.toolStripTemperatureCenter.Click += new System.EventHandler(this.ViewTemperature_Click);
             // 
             // openFileDialog1
             // 
@@ -359,7 +360,7 @@
         private System.Windows.Forms.ToolStripButton toolStripButton4;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripButton toolStripButton5;
-        private System.Windows.Forms.ToolStripButton toolStripButton6;
+        private System.Windows.Forms.ToolStripButton toolStripTemperatureCenter;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TreeView treeView1;
