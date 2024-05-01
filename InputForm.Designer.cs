@@ -320,6 +320,8 @@
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Name = "InputForm";
+            this.Resizable = false;
+            this.Style = MetroFramework.MetroColorStyle.Lime;
             this.Text = "Изменение температуры шара в охлаждающей жидкости ";
             this.ResumeLayout(false);
             this.PerformLayout();

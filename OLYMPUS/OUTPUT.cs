@@ -18,9 +18,10 @@ namespace OLYMPUS
         {
             DateTime now = DateTime.Now;
             string way_str = DECLARE.wayOut;
-
+            
             using (StreamWriter fout = new StreamWriter(way_str))
             {
+                
                 fout.WriteLine("Выходные данные для программного комплекса \"OLYMPUS-MVSC\"");
                 fout.WriteLine("*************************************************************");
                 fout.WriteLine($"Версия: 02.01 Дата: {now.Day}.{(now.Month >= 9 ? "" : "0")}{now.Month}.{now.Year}");
@@ -44,8 +45,8 @@ namespace OLYMPUS
                 fout.WriteLine("\n4. Управляющие параметры\n");
                 fout.WriteLine($"{DECLARE.PrintStep} - шаг вывода результата\n");
 
-                fout.WriteLine("\n5. Числа подобия\n\n\n\n\n");
-                fout.WriteLine("№ Шаг Число Фурье Таблица температур");
+                fout.WriteLine("\n5. Числа подобия\n");
+                fout.Write("№ Шаг Число Фурье Таблица температур");
             }
         }
         public static void Output2()
