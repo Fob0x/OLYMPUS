@@ -21,8 +21,12 @@ namespace OLYMPUS
 
         private void runToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CONTROL.Contrl();
-        }
+			textBox1.Text = "Расчёт данных...\n";
+			CONTROL.Contrl();
+			textBox1.Text = "Расчёт данных закончен\n";
+		}
+
+       
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
@@ -112,7 +116,15 @@ namespace OLYMPUS
             graph.Show();
         }
 
-        
-
-    }
+		private void editClick(object sender, EventArgs e)
+		{
+			textBox1.Text = "Редактирование данных...\n";
+			DECLARE.wayIn = openFileDialog1.FileName;
+			PROLOG.Preset();
+			inputForm = new InputForm();
+			inputForm.SetInputData();
+			inputForm.Show();
+			
+		}
+	}
 }

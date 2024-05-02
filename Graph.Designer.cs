@@ -28,58 +28,59 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
-            this.SuspendLayout();
-            // 
-            // chart1
-            // 
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            legend1.Title = "Моменты времени";
-            this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(23, 136);
-            this.chart1.Name = "chart1";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(811, 357);
-            this.chart1.TabIndex = 0;
-            this.chart1.Text = "chart1";
-            title1.Name = "Title1";
-            title1.Text = "Профиль безразмерной температуры ";
-            this.chart1.Titles.Add(title1);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(172, 81);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(441, 31);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Поле безразмерной температуры";
-            // 
-            // Graph
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(857, 516);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.chart1);
-            this.Name = "Graph";
-            this.Text = "Визуализация результата";
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
+			System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+			System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+			System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+			System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
+			this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+			this.label1 = new System.Windows.Forms.Label();
+			((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+			this.SuspendLayout();
+			// 
+			// chart1
+			// 
+			chartArea1.Name = "ChartArea1";
+			this.chart1.ChartAreas.Add(chartArea1);
+			this.chart1.Dock = System.Windows.Forms.DockStyle.Fill;
+			legend1.Name = "Legend1";
+			legend1.Title = "Моменты времени";
+			this.chart1.Legends.Add(legend1);
+			this.chart1.Location = new System.Drawing.Point(20, 60);
+			this.chart1.Name = "chart1";
+			series1.ChartArea = "ChartArea1";
+			series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+			series1.Legend = "Legend1";
+			series1.Name = "Series1";
+			this.chart1.Series.Add(series1);
+			this.chart1.Size = new System.Drawing.Size(817, 436);
+			this.chart1.TabIndex = 0;
+			this.chart1.Text = "chart1";
+			title1.Name = "Title1";
+			title1.Text = "Профиль безразмерной температуры ";
+			this.chart1.Titles.Add(title1);
+			// 
+			// label1
+			// 
+			this.label1.Dock = System.Windows.Forms.DockStyle.Top;
+			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.label1.Location = new System.Drawing.Point(20, 60);
+			this.label1.Name = "label1";
+			this.label1.Size = new System.Drawing.Size(817, 31);
+			this.label1.TabIndex = 1;
+			this.label1.Text = "Поле безразмерной температуры";
+			// 
+			// Graph
+			// 
+			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.ClientSize = new System.Drawing.Size(857, 516);
+			this.Controls.Add(this.label1);
+			this.Controls.Add(this.chart1);
+			this.Name = "Graph";
+			this.Style = MetroFramework.MetroColorStyle.Orange;
+			this.Text = "Визуализация результата";
+			((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+			this.ResumeLayout(false);
 
         }
 

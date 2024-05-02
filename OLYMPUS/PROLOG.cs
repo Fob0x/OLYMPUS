@@ -96,7 +96,7 @@ namespace OLYMPUS
 
         private static double ReadDoubleFromLine(string line)
         {
-            string[] elements = line.Split(' '); // Разбиваем строку на массив строк по пробелам блять, сука, неужели оно работает
+            string[] elements = line.Split(' '); // Разбиваем строку на массив строк по пробелает
             double elem;
             if (elements.Length > 0 && double.TryParse(elements[0], out elem))
                 return elem;
