@@ -76,77 +76,7 @@ namespace OLYMPUS
                         this.chart1.Series.Add(series);
                         break;
                     }
-					//            case 2:
-					//                {
-					//                    while (!fgraph.EndOfStream)
-					//                    {
-					//try
-					//{
-					//	var series = new System.Windows.Forms.DataVisualization.Charting.Series();
-					//var lineу = fgraph.ReadLine().Split(' ');
-					//var line = fgraph.ReadLine().Split(' ');
-					//double elem = double.Parse(line[2].Replace(',', '.'), CultureInfo.InvariantCulture);
-					//                        Console.WriteLine(elem);
-					//                        int t = int.Parse(line[1]);
-					//series.LegendText = t.ToString();
-					//                        series.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-					//                        chart1.ChartAreas[0].AxisX.Title = "Безразмерное расстояние";
-					//                        chart1.ChartAreas[0].AxisY.Title = "Безразмерная температура";
-					//                        chart1.Titles[0].Text = "Профили безразмерной температуры";
-					//                        for (int r = 0; r <= DECLARE.Nr; r++)
-					//                        {
-					//	elem = double.Parse(line[2].Replace(',', '.'), CultureInfo.InvariantCulture);
-					//	series.Points.AddXY((double)r / DECLARE.Nr, elem);
-					//                        }
-					//                        chart1.Series.Add(series);
-					//}
-					//catch (FormatException ex)
-					//{
-					//	// Обработка исключения: вывод сообщения об ошибке в MessageBox
-					//	MessageBox.Show($"Ошибка при преобразовании строки в число: {ex.Message}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-					//}
-
-					//                    }
-					//                    break;
-					//                }
-					/*case 2:
-					//{
-					//	while (!fgraph.EndOfStream)
-					//	{
-					//		System.Windows.Forms.DataVisualization.Charting.Series series = new System.Windows.Forms.DataVisualization.Charting.Series();
-					//		double elem;
-					//		//string elem;
-					//		int t;
-
-					//		string linery = fgraph.ReadLine();
-					//		string line = fgraph.ReadLine();
-					//		if (line == null) break; // Check for end of file
-								
-					//		string[] partss = line.Split(' ');
-					//		elem = double.Parse(partss[0]);
-					//		//elem = partss[0];
-					//		t = int.Parse(partss[1]);
-
-					//		series.LegendText = t.ToString();
-					//		series.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-
-					//		chart1.ChartAreas[0].AxisX.Title = "Безразмерное расстояние";
-					//		chart1.Titles[0].Text = "Профили безразмерной температуры";
-
-					//		for (int r = 0; r <= DECLARE.Nr; r++)
-					//		{
-					//			line = fgraph.ReadLine();
-					//			if (line == null) break; // Check for end of file
-					//			//elem = (line);
-					//			elem = double.Parse(line);
-					//			series.Points.AddXY((double)r / DECLARE.Nr, elem);
-					//		}
-
-					//		this.chart1.Series.Add(series);
-					//	}
-					//	break;
-					//}
-					*/
+					
 					case 2:
 					{
 						while (!fgraph.EndOfStream)

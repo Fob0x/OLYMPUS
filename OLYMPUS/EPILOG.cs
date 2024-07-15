@@ -10,8 +10,6 @@
             Дата: 12.03.2024
         */
 
-        public EPILOG() { }
-
         public static void Tesend()
         {
             DECLARE.Step++;

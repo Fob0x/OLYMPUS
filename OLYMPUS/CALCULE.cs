@@ -13,6 +13,15 @@ namespace OLYMPUS
         */
         public CALCULE() { }
 
+        /* Этот код реализует вычислительный алгоритм относительной температуры в некоторой системе, 
+         * используя метод конечных разностей и тригонометрические ряды.*/
+
+        /// <summary>
+        /// Этот метод вычисляет ряд для синуса
+        /// </summary>
+        /// <param name="r_"></param>
+        /// <param name="mu"></param>
+        /// <returns></returns>
         static double SinRange(double r_, double mu)
         {
             double delta = 1;
@@ -26,7 +35,9 @@ namespace OLYMPUS
             }
             return result;
         }
-
+        /// <summary>
+        /// Вычисляет распределение относительной температуры по радиальному направлению на каждом шаге времени
+        /// </summary>
         static void CalculateRelativeTemperature()
         {
             double a = DECLARE.Lambda / (DECLARE.Ro * DECLARE.Cv);
@@ -60,9 +71,5 @@ namespace OLYMPUS
         }
 
         public static void Result() { }
-
-        /*Данный класс реализует вычислительный алгоритм на базе одного из численных методов решения
-         * начально-краевой задачи и проводит расчёт основных интегральных характеристик изучаемого
-         * процесса или явления.*/
     }
 }

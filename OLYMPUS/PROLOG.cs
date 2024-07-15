@@ -13,21 +13,9 @@ namespace OLYMPUS
             Дата: 12.03.2024
         */
 
-        public PROLOG() { }
-
         public static void LabRun()
         {
-            //DECLARE.Theta = new double[DECLARE.Nr + 1][];
-            //for (int r = 0; r <= DECLARE.Nr; r++)
-            //    DECLARE.Theta[r] = new double[DECLARE.Nt + 1];
-
-            //if (DECLARE.wayOut == null)
-            //{
-            //    string baseDirectory = AppDomain.CurrentDomain.BaseDirectory;
-            //    int pos = baseDirectory.LastIndexOf("\\");
-            //    string way = baseDirectory.Substring(0, pos - 5) + "OLYMPUS\\";
-            //    DECLARE.wayOut = way + "OutputData\\output_system.txt";
-            //}
+            
             // Инициализация Theta
             DECLARE.Theta = new double[DECLARE.Nr + 1, DECLARE.Nt + 1];
 
@@ -38,16 +26,11 @@ namespace OLYMPUS
                     DECLARE.Theta[r, t] = 0; // Инициализация элементов массива
                 }
             }
-
+		    
+            // Инициализируем путь нахождения файла записи
+            /* "В хороших инженерских программах сначала информация записывается в файл, а после оттуда считываются данные*/
             if (DECLARE.wayOut == null)
-            {
-                //string baseDirectory = AppDomain.CurrentDomain.BaseDirectory;
-                //int pos = baseDirectory.LastIndexOf("\\");
-                //string way = baseDirectory.Substring(0, pos - 5) + "OLYMPUS\\";
-                string way = @"D:\Repos\OLYMPUS\OLYMPUS\";
-                DECLARE.wayOut = way + "OutputData\\output_system.txt";
-                
-            }
+                DECLARE.wayOut = $"{Environment.CurrentDirectory}\\OLYMPUS\\OutputData\\output_system.txt";
 
         }
         public static void Clear() { }

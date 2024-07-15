@@ -8,9 +8,8 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 namespace OLYMPUS
 {
     public partial class OLYMPUS : MetroForm
-    {
+	{
         private InputForm inputForm; // Объявляем переменную для хранения экземпляра InputForm
-        private Graph graph;
         public OLYMPUS()
         {
             InitializeComponent();
@@ -108,7 +107,7 @@ namespace OLYMPUS
         {
             textBox1.Text = "Визуализация результатов\n";
             Update();
-            graph = new Graph();
+			var graph = new Graph();
             if (/*sender == this.menuViewTemperatureCenter ||*/ sender == toolStripTemperatureCenter)
                 graph.modification = 1;
             else
@@ -124,7 +123,7 @@ namespace OLYMPUS
 			inputForm = new InputForm();
 			inputForm.SetInputData();
 			inputForm.Show();
-			
+
 		}
 	}
 }
